@@ -1,27 +1,42 @@
 package chess.piece;
 
-public abstract class Piece 
+import chess.board.ChessBoard;
+import chess.move.Move;
+
+public  class Piece 
 {
-	private boolean white;
-	private boolean dead=false;
-	public abstract boolean isValid();
-	public Piece(boolean white)
-	{
-		this.white = white;
+	 private char colour,type;
+	 private Move moves[];
+	 
+	 Piece(char colour,char type)
+	 {
+		 this.colour=colour;
+		 this.type=type;
+		 moves=new Move[0];
+	 }
+	 
+	 public Piece(char colour,char type,Move moves[])
+	 {
+		 this(colour,type);
+		 this.moves=moves;
+		 
+	 }
+     
+	 public boolean canMove(ChessBoard board,int startRow,int startCol,int endRow,int endCol)
+	 {
+		 for(Move move:moves)
+		 {
+			 if(move.canMove(board, startRow, startCol, endRow, endCol))return true;
+		 }
+		return false;
+	 }
+	public char getColour() {
+		return colour;
 	}
-	
-	public boolean isDead()
-	{
-		return dead;
+
+	public char getType() {
+		return type;
 	}
-	
-	public boolean isWhite()
-	{
-		return white;
-	}
-    
-	public void setDead(boolean dead)
-	{
-		this.dead=dead;
-	}
+	 
+	 
 }
