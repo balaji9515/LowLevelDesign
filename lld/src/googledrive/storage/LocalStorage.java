@@ -1,7 +1,6 @@
 package googledrive.storage;
 
 import java.util.HashMap;
-import java.util.function.BiFunction;
 
 import googledrive.filesystemcomponent.File;
 import googledrive.filesystemcomponent.NullFile;

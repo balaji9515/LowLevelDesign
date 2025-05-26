@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import googledrive.filesystemmanager.FileVersion;
-import googledrive.observers.FileAddObservable;
-import googledrive.observers.Observable;
 import googledrive.permissionDecorator.PermissionDecorator;
 import googledrive.storage.StorageStrategy;
 

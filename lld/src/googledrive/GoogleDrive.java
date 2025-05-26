@@ -8,8 +8,6 @@ import googledrive.filesystemmanager.FileSystemManager;
 import googledrive.filesystemmanager.FileSystemSearch;
 import googledrive.observers.EmailObserver;
 import googledrive.observers.FileAddObservable;
-import googledrive.observers.Observable;
-import googledrive.observers.Observer;
 import googledrive.operation.FileOperation;
 import googledrive.operation.addOperation;
 import googledrive.permissionDecorator.Permissions;
