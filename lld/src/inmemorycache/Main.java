@@ -6,10 +6,9 @@ public class Main
 	public static void main(String Args[]) throws InterruptedException
 	{   
 		
-		LRUCacheEvictionPolicy<Integer> evictionPolicy=new LRUCacheEvictionPolicy<Integer>();
+	   LRUCacheEvictionPolicy<Integer> evictionPolicy=new LRUCacheEvictionPolicy<Integer>();
 	   InMemoryCache<Integer,Object> cache=new InMemoryCache<Integer,Object>(3,evictionPolicy);
-	    
-	   
+	  
 	   CacheEntry<Object> cacheEntry1=new CacheEntry<>("balaji",(long) 3000);
 	   cache.putIntoCache(1,cacheEntry1);
 	   
@@ -22,9 +21,8 @@ public class Main
 	   System.out.println(cache.getFormCache(1));
 	   Thread.sleep(2500); 
 	   System.out.println(cache.getFormCache(2));
-	   System.out.println(cache.getFormCache(1));
+	   System.out.println(cache.getFormCache(1));   
 	   
-	      
 	   
 	}
 
